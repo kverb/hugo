@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Very loosely organized notes of server builds.
+Plex server Ideally 1U or 2U. Probably should be an intel chip that supports &amp;ldquo;Quick Sync&amp;rdquo; for efficient video transcoding. Supermicro barebones seems to have the ideal chassis&#43;mobo combo. Must have 10Gbe or SFP&#43;
+1U barebones/prebiult supermicro mini, low power SYS-E300-9C with coffee lake i7 can this handle transcodes? lol $5k SYS-110P-FRDN2T 16&amp;quot; depth uses LGA-4189 socket SYS-110C-FHN4T 12&amp;quot; depth uses cheaper CPU LGA-1200 socket 5019c-l doesn&amp;rsquo;t have 10Gbe nic ; can probably be added later DIY Should probably go with intel 1151 socket, based on serverbuilds." />
+<meta name="keywords" content=", untagged" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://www.3aal.us/notes/server/" />
+
+
+    <title>
+        
+            server notes :: 3 Acres &amp; Liberty  — A random internet website
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="server notes">
+<meta itemprop="description" content="Very loosely organized notes of server builds.
+Plex server Ideally 1U or 2U. Probably should be an intel chip that supports &ldquo;Quick Sync&rdquo; for efficient video transcoding. Supermicro barebones seems to have the ideal chassis&#43;mobo combo. Must have 10Gbe or SFP&#43;
+1U barebones/prebiult supermicro mini, low power SYS-E300-9C with coffee lake i7 can this handle transcodes? lol $5k SYS-110P-FRDN2T 16&quot; depth uses LGA-4189 socket SYS-110C-FHN4T 12&quot; depth uses cheaper CPU LGA-1200 socket 5019c-l doesn&rsquo;t have 10Gbe nic ; can probably be added later DIY Should probably go with intel 1151 socket, based on serverbuilds."><meta itemprop="datePublished" content="2022-06-11T12:45:58-04:00" />
+<meta itemprop="dateModified" content="2022-06-11T12:45:58-04:00" />
+<meta itemprop="wordCount" content="500"><meta itemprop="image" content="https://www.3aal.us/"/>
+<meta itemprop="keywords" content="untagged," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.3aal.us/"/>
+
+<meta name="twitter:title" content="server notes"/>
+<meta name="twitter:description" content="Very loosely organized notes of server builds.
+Plex server Ideally 1U or 2U. Probably should be an intel chip that supports &ldquo;Quick Sync&rdquo; for efficient video transcoding. Supermicro barebones seems to have the ideal chassis&#43;mobo combo. Must have 10Gbe or SFP&#43;
+1U barebones/prebiult supermicro mini, low power SYS-E300-9C with coffee lake i7 can this handle transcodes? lol $5k SYS-110P-FRDN2T 16&quot; depth uses LGA-4189 socket SYS-110C-FHN4T 12&quot; depth uses cheaper CPU LGA-1200 socket 5019c-l doesn&rsquo;t have 10Gbe nic ; can probably be added later DIY Should probably go with intel 1151 socket, based on serverbuilds."/>
+
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-06-11 12:45:58 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">3 Acres &amp; Liberty</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">blog</a></li><li><a href="/notes">notes</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://www.3aal.us/notes/server/">server notes</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>Very loosely organized notes of server builds.</p>
+<h2 id="plex-server">Plex server</h2>
+<p>Ideally 1U or 2U. Probably should be an intel chip that supports &ldquo;Quick Sync&rdquo; for efficient video transcoding.
+Supermicro barebones seems to have the ideal chassis+mobo combo.
+Must have 10Gbe or SFP+</p>
+<h3 id="1u-barebonesprebiult-supermicro">1U barebones/prebiult supermicro</h3>
+<ul>
+<li>mini, low power <a href="https://www.supermicro.com/en/products/system/Mini-ITX/SYS-E300-9C.cfm">SYS-E300-9C</a>
+<ul>
+<li>with coffee lake i7 can this handle transcodes?</li>
+</ul>
+</li>
+<li>lol $5k <a href="https://www.supermicro.com/en/products/system/IoT/1U/SYS-110P-FRDN2T">SYS-110P-FRDN2T</a>
+<ul>
+<li>16&quot; depth</li>
+<li>uses <a href="https://www.newegg.com/p/pl?N=100161260%20601386431">LGA-4189 socket</a></li>
+</ul>
+</li>
+<li><a href="https://www.supermicro.com/en/products/system/IoT/1U/SYS-110C-FHN4T">SYS-110C-FHN4T</a>
+<ul>
+<li>12&quot; depth</li>
+<li>uses cheaper CPU <a href="https://www.newegg.com/p/pl?N=100161260%20601356222">LGA-1200 socket</a></li>
+</ul>
+</li>
+<li><a href="https://www.thinkmate.com/system/superserver-5019c-l">5019c-l</a>
+<ul>
+<li>doesn&rsquo;t have 10Gbe nic ; can probably be added later</li>
+</ul>
+</li>
+</ul>
+<h3 id="diy">DIY</h3>
+<p>Should probably go with intel 1151 socket, based on <a href="https://forums.serverbuilds.net/t/guide-hardware-transcoding-the-jdm-way-quicksync-and-nvenc/1408">serverbuilds.net</a> and <a href="https://forums.serverbuilds.net/t/guide-hardware-transcoding-the-jdm-way-quicksync-and-nvenc/1408">Perfect Media Server guy</a></p>
+<h4 id="final-candidate-build-2425">Final candidate build (~$2425)</h4>
+<ul>
+<li><a href="https://www.newegg.com/p/N82E16813144397?Item=N82E16813144397">$129 MSI B560M PRO-VDH WIFI LGA 1200 Intel B560 SATA 6Gb/s Micro ATX Intel Motherboard</a></li>
+<li><a href="https://www.newegg.com/intel-core-i5-11400-core-i5-11th-gen/p/N82E16819118241?Item=9SIA12KE9X7943&amp;quicklink=true">$215 Intel Core i5-11400 - Core i5 11th Gen Rocket Lake 6-Core 2.6 GHz LGA 1200 65W</a>
+<ul>
+<li><a href="https://www.newegg.com/thermaltake-engine-27-cl-p032-ca06sl-a/p/N82E16835106417?Item=N82E16835106417">$69 Thermaltake Engine 27 1U Low-Profile 70W Intel 60mm Low Noise PWM Fan Forty Fan Blade CPU Cooler</a></li>
+</ul>
+</li>
+<li><a href="https://www.newegg.com/crucial-32gb-288-pin-ddr4-sdram/p/N82E16820156237?Item=9SIAD8UFCD5687">$272 (2x$136) Crucial 32GB Single DDR4 3200 MT/s CL22 DIMM 288-Pin Memory</a></li>
+<li><a href="https://www.newegg.com/samsung-1tb-980/p/N82E16820147804?Item=N82E16820147804">$99 SAMSUNG 980 M.2 2280 1TB PCI-Express 3.0 x4, NVMe 1.4 V-NAND MLC Internal Solid State Drive</a></li>
+<li><a href="https://www.amazon.com/gp/product/B01LYQE6R5">$199 PLINKUSA 2U Rackmount (2x5.25+2x3.5 HD+2x2.5 HD)(15.16&quot; Deep)</a></li>
+<li><a href="https://www.newegg.com/p/N82E16817139279?Item=N82E16817139279">$95 CORSAIR RM650 650 W ATX 80 PLUS GOLD Certified Full Modular Power Supply</a></li>
+<li><a href="https://www.newegg.com/samsung-8tb-870-qvo-series/p/N82E16820147784?Item=9SIA12KC574074">(already purchased) $1375 ($687x2) SAMSUNG 870 QVO Series 2.5&quot; 8TB SATA III Samsung 4-bit MLC V-NAND Internal Solid State Drive (SSD)</a></li>
+<li>sata cables already ordered</li>
+<li>#TODO: 10Gbe/SFP+ card</li>
+</ul>
+<h4 id="potential-build">Potential build:</h4>
+<ul>
+<li>mobo/cpu opt 1
+<ul>
+<li><a href="https://www.newegg.com/asrock-rack-e3c246d4u-supports-intel-xeon-e-2100processor/p/N82E16813140021?Item=N82E16813140021">$249 AsRock Rack E3C246D4U </a></li>
+<li><a href="https://www.newegg.com/intel-xeon-e-2126g-lga-1151/p/N82E16819118002?Item=9SIA25VBCR6166">$299 Intel Xeon E-2126G Coffee Lake</a></li>
+</ul>
+</li>
+<li>mobo/cpu opt 2
+<ul>
+<li><a href="https://www.newegg.com/intel-core-i5-10400-core-i5-10th-gen/p/N82E16819118135?quicklink=true">$129 MSI socket 1200</a></li>
+<li><a href="https://www.newegg.com/intel-core-i5-10400-core-i5-10th-gen/p/N82E16819118135?quicklink=true">$175 core i5 10th gen (rocket lake) 65W</a></li>
+</ul>
+</li>
+<li><a href="https://www.newegg.com/samsung-1tb-980/p/N82E16820147804?Item=N82E16820147804">$99 SAMSUNG 980 M.2 2280 1TB</a></li>
+<li><a href="https://www.amazon.com/gp/product/B01LYQE6R5/">$199 2U PlinkUSA chassi</a>
+<ul>
+<li>I dont think the <a href="https://www.newegg.com/noctua-nh-l9i/p/N82E16835608029?Item=N82E16835608029">Noctua low-profile</a> will fit in 1U</li>
+</ul>
+</li>
+<li><a href="https://www.amazon.com/gp/product/B0736W5BH2/">$280 4x16 GB RAM</a></li>
+<li><a href="https://www.newegg.com/p/N82E16817139279">$95 650W PSU</a></li>
+</ul>
+<h2 id="nas">NAS</h2>
+<ul>
+<li>
+<p>Can probably DIY</p>
+</li>
+<li>
+<p>need to understand SAS vs SATA; physical disc connection limitations</p>
+</li>
+<li>
+<p>apparently <a href="https://www.amazon.com/ICY-DOCK-Mobile-Comparable-Tray-less/dp/B01M0BIPYC/">6 2.5&quot; ssd can fit in 1 5.25&quot; drive bay</a></p>
+</li>
+<li>
+<p>chassis:</p>
+<ul>
+<li>rosewill, plinkusa, chenbro, silverstone seem to be the only short-depth ones</li>
+<li><a href="https://www.amazon.com/PLINKUSA-RACKBUY-Micro-ATX-Rackmount-IPC-E239B/dp/B01LYQE6R5">stylish 2U 16&quot; deep PLinkUSA</a></li>
+<li><a href="https://www.amazon.com/PLINKUSA-RACKBUY-Rackmount-Micro-ATX-IPC-2022M/dp/B01M09ZO7P/">2 x 5.25&quot; front drive bays 2U short PLinkUSA</a>
+<ul>
+<li>15&quot; depth</li>
+<li>uses full ATX PSU, which seems weird</li>
+</ul>
+</li>
+<li><a href="https://www.newegg.com/black-athena-power-rm-2u200hr65u2/p/N82E16811192388">2U Athena power</a>
+<ul>
+<li>14&quot; depth</li>
+<li><strong>has PSU</strong> AND 2 x 5.25&quot; front drive bays; could usewith icy dock</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>mobo</p>
+<ul>
+<li>epyc 3000 series? SoC , lots of PCI &ldquo;lanes&rdquo;, fuckton of RAM, and low power. Doesn&rsquo;t typically include 10Gbe</li>
+<li>Intel Xeon D series SoC, typically includes 10Gbe
+<ul>
+<li><a href="https://www.gigabyte.com/us/Enterprise/Server-Motherboard/MB10-DS4-rev-13">Gigabyte Xeon D-1500</a></li>
+</ul>
+</li>
+<li>most seem to use OCUlink or sas breakout cables to connect SATA drives</li>
+<li>high end SoC: <a href="https://www.newegg.com/asrock-d2143d4i2-2t/p/N82E16813157904">AsRock Rack D2143D4I2-2T Mini-ITX Xeon D-2100</a></li>
+<li>overkill option: <a href="https://www.newegg.com/asrock-rack-romed4id-2t-amd-epyc-7002-series-processors/p/N82E16813140059">ASRock Rome Epyc 7000 series</a>
+<ul>
+<li>would require a 7000 series CPU; uses too much power</li>
+</ul>
+</li>
+<li><a href="https://www.newegg.com/asrock-rack-x570d4u-2l2t-supports-3rd-gen-amd-ryzen-processors-and-2nd-gen-amd-ryzen-processors-with/p/N82E16813140056?Description=X570D4U-2L2T&amp;cm_re=X570D4U-2L2T-_-13-140-056-_-Product&amp;quicklink=true">AsRock Rack X570D4U-2L2T</a>
+<ul>
+<li>ryzen zen 3</li>
+<li>has dual 10Gbe &amp; 8 SATA ports</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="premade-systems">Premade systems</h3>
+<ul>
+<li><a href="https://www.supermicro.com/en/products/system/1U/5018/SYS-5018D-FN4T.cfm">1U Supermicro SYS-5018D-FN4T</a>
+<ul>
+<li>dual 10Gbe</li>
+<li>6 SATA ports</li>
+<li>M Key 2242/2280</li>
+<li>might be able to just put SSDs in the empty space inside the chassis, or into an <a href="https://www.newegg.com/icy-dock-mb326sp-b-6-x-2-5-sata-6gbps-sas-hdd-ssd-mobile-rack-cage-in-1-x-5-25-bay/p/N82E16817198068?Description=icy%20dock%205.25&amp;cm_re=icy_dock%205.25-_-17-198-068-_-Product">Icy Dock cage</a></li>
+</ul>
+</li>
+<li><a href="https://www.newegg.com/p/2NS-000A-0FDT1">1U ASRock ryzen in a supermicro chassis</a>
+<ul>
+<li>kinda strange, but has dual 10Gbe &amp; 8 SATA ports.</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://www.3aal.us/tags/untagged/">untagged</a></span>
+        
+    </p>
+
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
+
+
+
+    </body>
+</html>

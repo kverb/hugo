@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3 Acres &amp; Liberty</title>
+    <link>https://www.3aal.us/index.html</link>
+    <description>Recent content on 3 Acres &amp; Liberty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright><atom:link href="https://www.3aal.us/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hack</title>
+      <link>https://www.3aal.us/tags/hack/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/tags/hack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://www.3aal.us/tags/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/tags/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>untagged</title>
+      <link>https://www.3aal.us/tags/untagged/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/tags/untagged/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

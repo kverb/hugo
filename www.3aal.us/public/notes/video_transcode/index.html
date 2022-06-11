@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="meta These are some notes gathered on my exploration of transcoding videos for more reliable playback. This doesn’t cover the downloading of the video files; just post-processing them into different formats for playback, primarily on an Apple TV 4k (2019).
+Hardware used:
+AMD Ryzen 7 3800X 8-Core Processor &#43; NVIDIA GeForce RTX 2060 SUPER 11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz &#43; (iGPU) overview Most titles downloaded from the internet are h264 encoded, mkv container files." />
+<meta name="keywords" content=", untagged" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://www.3aal.us/notes/video_transcode/" />
+
+
+    <title>
+        
+            video transcoding :: 3 Acres &amp; Liberty  — A random internet website
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.4e5c639214707eff609bb55fe49e183dee42258a73bc90e4cc7b0a84f900798a.css">
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="video transcoding">
+<meta itemprop="description" content="meta These are some notes gathered on my exploration of transcoding videos for more reliable playback. This doesn’t cover the downloading of the video files; just post-processing them into different formats for playback, primarily on an Apple TV 4k (2019).
+Hardware used:
+AMD Ryzen 7 3800X 8-Core Processor &#43; NVIDIA GeForce RTX 2060 SUPER 11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz &#43; (iGPU) overview Most titles downloaded from the internet are h264 encoded, mkv container files."><meta itemprop="datePublished" content="2022-06-11T12:45:58-04:00" />
+<meta itemprop="dateModified" content="2022-06-11T12:45:58-04:00" />
+<meta itemprop="wordCount" content="942"><meta itemprop="image" content="https://www.3aal.us/"/>
+<meta itemprop="keywords" content="untagged," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://www.3aal.us/"/>
+
+<meta name="twitter:title" content="video transcoding"/>
+<meta name="twitter:description" content="meta These are some notes gathered on my exploration of transcoding videos for more reliable playback. This doesn’t cover the downloading of the video files; just post-processing them into different formats for playback, primarily on an Apple TV 4k (2019).
+Hardware used:
+AMD Ryzen 7 3800X 8-Core Processor &#43; NVIDIA GeForce RTX 2060 SUPER 11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz &#43; (iGPU) overview Most titles downloaded from the internet are h264 encoded, mkv container files."/>
+
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2022-06-11 12:45:58 -0400 EDT" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">3 Acres &amp; Liberty</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">blog</a></li><li><a href="/notes">notes</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="https://www.3aal.us/notes/video_transcode/">video transcoding</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <h2 id="meta">meta</h2>
+<p>These are some notes gathered on my exploration of transcoding videos for more reliable playback. This doesn’t cover the downloading of the video files; just post-processing them into different formats for playback, primarily on an Apple TV 4k (2019).</p>
+<p>Hardware used:</p>
+<ul>
+<li>AMD Ryzen 7 3800X 8-Core Processor + NVIDIA GeForce RTX 2060 SUPER</li>
+<li>11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz + (iGPU)</li>
+</ul>
+<h2 id="overview">overview</h2>
+<p>Most titles downloaded from the internet are h264 encoded, mkv container files. Audio codecs vary and subtitles are complete anarchy.</p>
+<p>AppleTV (my primary playback client) can play the h264 encoded stream generally without issue. The remux from MKV to MP4 and audio transcoding generally uses very little cpu on the plex server.</p>
+<p>HEVC / h265 <em>can</em> be more space efficient for the same quality, so converting the library to it is worthwhile. However, there are observable limits to how much space can be saved for a given quality level. The main heuristic is thus: if the source file is a high-bitrate, h264 or original iso, then convert to HEVC at about 10mbps (for 1080p).In general, the quality trade off (as well as the energy required to process the transcode) just doesn’t make sense if the file is already below an avg bitrate of 15 mbps. Also, a “how much do i like this movie” factor should be considered for if and how much quality loss is acceptable.</p>
+<p><a href="https://codecalamity.com/hardware-encoding-4k-hdr10-videos/#has-hevc-hardware-encoding-caught-up-to-the-quality-of-software-encoding">Prefer libx265 (cpu / software) based transcodes to GPU-assisted transcodes.</a> GPU is ideal for real-time transcoding. Although it will take much longer, x265 will yield higher quality at smaller space. Consider GPU transcodes for “less important” titles; i.e., movies and series that don’t need “archival quality”.</p>
+<p>Subtitles are &hellip; annoying if converting from mkv to mp4. The “other transcoding” script seems to handle this, but because mp4 lacks support for lots of subtitle formats, there are still limitations.</p>
+<h2 id="video_transcode-tool">video_transcode tool</h2>
+<p>This is basically an easier-to-understand wrapper for ffmpeg. Install ruby, then install this with ruby gems. You can just read the script to get a better understanding of all the options and how they map to ffmpeg params.</p>
+<p><a href="https://github.com/donmelton/other_video_transcoding">https://github.com/donmelton/other_video_transcoding</a></p>
+<p>use this script to generate an ffmpeg command that can be executed on another system, if needed.</p>
+<p>requires [ffmpeg] , and <a href="%5Bhttps://archlinux.org/packages/extra/x86_64/mkvtoolnix-cli/%5D(https://archlinux.org/packages/extra/x86_64/mkvtoolnix-cli/)">mkvtoolnix-cli</a> packages</p>
+<p>Example with libx265 (software/CPU transcode):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>other-transcode <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --target <span style="color:#ae81ff">12000</span> <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># there are defaults for each resolution, but imo they&#39;re too low</span>
+</span></span><span style="display:flex;"><span>  --x265 <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># change this to VAAPI for gpu hw transcode</span>
+</span></span><span style="display:flex;"><span>  --hevc <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># no point in not doing HEVC </span>
+</span></span><span style="display:flex;"><span>  --mp4 <span style="color:#ae81ff">\ </span>  <span style="color:#75715e"># imo it&#39;s widely enough compatible. great for appleTV</span>
+</span></span><span style="display:flex;"><span>  --add-audio all <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># without this, the default will strip out all the extraneous audio</span>
+</span></span><span style="display:flex;"><span>  --add-subtitle eng <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  &lt;/path/to/file.mkv&gt; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -n <span style="color:#75715e"># &#34;dry run&#34; (just prints the ffmpeg commmand)mi</span>
+</span></span></code></pre></div><p>Example with iGPU (hardware accelerated transcode):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>other-transcode <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --vaapi <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># this is a reliable api for linux + intel w/ iGPU (QuickSync)</span>
+</span></span><span style="display:flex;"><span>  --target <span style="color:#ae81ff">12000</span> <span style="color:#ae81ff">\ </span> <span style="color:#75715e"># VAAPI doesn&#39;t have an easy equivalent of CRF ; this should be tweaked per title</span>
+</span></span><span style="display:flex;"><span>  --hevc <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --add-audio all <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --add-subtitle eng <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  &lt;/path/to/file.mkv&gt;  <span style="color:#75715e"># note: omitted --mp4 here because of subtitle incompatability</span>
+</span></span></code></pre></div><p>[Feb 19, 2022] - there is currently a bug in <code>intel-media-driver</code> that results in corrputed video output when using VAAPI (intel iGPU hw accelerated transcode).</p>
+<p>[Feb 20, 2022] - went down the rabbit hole of manually building libva, intel-media-driver (and all intermediate dependencies, yikes!) and ffmpeg with <a href="https://github.com/intel-media-ci/cartwheel-ffmpeg/blob/master/patches/0025-lavc-vaapi_encode_h265-fix-max_transform_hierarchy_d.patch">this patch</a>.</p>
+<p>example <code>ffmpeg</code> command that is generated:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -loglevel error -stats -vaapi_device /dev/dri/renderD128 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-i /media/movies/Honeyland<span style="color:#ae81ff">\ \(</span>2019<span style="color:#ae81ff">\)</span>/Honeyland<span style="color:#ae81ff">\ \(</span>2019<span style="color:#ae81ff">\)\ </span>Remux-1080p.mkv <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-map 0:0 -filter:v yadif,format<span style="color:#ae81ff">\=</span>nv12,hwupload -c:v hevc_vaapi -b:v 9000k <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-color_primaries:v bt709 -color_trc:v bt709 -colorspace:v bt709 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-metadata:s:v title<span style="color:#ae81ff">\=</span> -disposition:v default -map 0:1 -c:a:0 ac3 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-metadata:s:a:0 title<span style="color:#ae81ff">\=</span> -disposition:a:0 default -map 0:2 -c:a:1 aac <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-metadata:s:a:1 title<span style="color:#ae81ff">\=</span> -disposition:a:1 <span style="color:#ae81ff">0</span> -sn <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>-metadata:g title<span style="color:#ae81ff">\=</span> -default_mode passthrough <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>Honeyland<span style="color:#ae81ff">\ \(</span>2019<span style="color:#ae81ff">\)\ </span>Remux-1080p.mkv
+</span></span></code></pre></div><p>general ffmpeg param structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffmpeg -i &lt;input file&gt; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		-stats <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		-&lt;extra params&gt; <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>		&lt;output_file_name&gt;
+</span></span></code></pre></div><p>(likely rare), but remux + transcode BR disk .iso rip:</p>
+<p><a href="https://unixsheikh.com/tutorials/remuxing-iso-dvd-or-bluray-using-cat-and-ffmpeg-on-linux.html">https://unixsheikh.com/tutorials/remuxing-iso-dvd-or-bluray-using-cat-and-ffmpeg-on-linux.html</a></p>
+<p>essentially, the process is 1) mount the iso, find the correct m2ts file, combine them if necessary, then ffmpeg to package it up into .mkv and transcode if desired. Here’s an example of processing Apollo 11:</p>
+<p><code>ffmpeg -i br/BDMV/STREAM/00006.m2ts -stats -map 0:0 -pix_fmt yuv420p10le -c:v libx265 -x265-params profile=main10:crf=20 -tag:v hvc1 -map 0:a 'Apollo 11 (2019) Remux-2160p.mp4’</code></p>
+<p>using CRF for 4k main10:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nohup ffmpeg -loglevel error -stats -i ../Jojo<span style="color:#ae81ff">\ </span>Rabbit<span style="color:#ae81ff">\ \(</span>2019<span style="color:#ae81ff">\)\ </span>Remux-2160p.mkv <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -map 0:0 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -c:v libx265 -pix_fmt:v yuv420p10le -crf <span style="color:#ae81ff">17</span> -preset slower <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -color_primaries:v bt2020 -color_trc:v smpte2084 -colorspace:v bt2020nc <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -metadata:s:v title<span style="color:#ae81ff">\=</span> -disposition:v default <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -map 0:1 -c:a:0 ac3 -metadata:s:a:0 title<span style="color:#ae81ff">\=</span> -disposition:a:0 default <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -sn -metadata:g title<span style="color:#ae81ff">\=</span> -default_mode passthrough <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  Jojo<span style="color:#ae81ff">\ </span>Rabbit<span style="color:#ae81ff">\ \(</span>2019<span style="color:#ae81ff">\)\ </span>Remux-2160p.mkv &amp;
+</span></span></code></pre></div><h3 id="quality-checking-the-transcoded-output-is-essential">Quality checking the transcoded output is essential.</h3>
+<h2 id="further-reading">further reading</h2>
+<p><a href="https://codecalamity.com/encoding-settings-for-hdr-4k-videos-using-10-bit-x265/">https://codecalamity.com/encoding-settings-for-hdr-4k-videos-using-10-bit-x265/</a> - tl;dr CRF 20 preset slow</p>
+<blockquote>
+<p><a href="https://aaron.cc/ffmpeg-hevc-apple-devices/">Apple TV 4k hevc</a> - Use the <code>-tag:v hvc1</code> parameter in your FFmpeg command make your HEVC file work on Apple devices.</p>
+</blockquote>
+<p><a href="https://codecalamity.com/stop-re-encoding-videos/">https://codecalamity.com/stop-re-encoding-videos/</a></p>
+<p><a href="https://slhck.info/video/2017/02/24/crf-guide.html">https://slhck.info/video/2017/02/24/crf-guide.html</a></p>
+<p><a href="https://netflixtechblog.com/per-title-encode-optimization-7e99442b62a2">https://netflixtechblog.com/per-title-encode-optimization-7e99442b62a2</a> - very interesting. Big takeaways are:</p>
+<ol>
+<li>every netflix title is considered to have its own optimal bitrate + quality level for each resolution</li>
+<li>Lower resolution + higher precision can result in greater quality than higher res + lower precision, but mostly at the low side of the quality curve.</li>
+<li>netflix stores multiple encodes per resolution, per title. Storage tradeoff gives bandwidth + user experience wins</li>
+</ol>
+<p><a href="https://gist.github.com/Brainiarc7/95c9338a737aa36d9bb2931bed379219">https://gist.github.com/Brainiarc7/95c9338a737aa36d9bb2931bed379219</a></p>
+<h2 id="still-todo--open-questions">still TODO / open questions</h2>
+<ul>
+<li>test performance / effect of performing conversion over NFS
+<ul>
+<li>for the ryzen + Nvidia system, the source file is first copied to the local machine</li>
+<li>when a 3rd system is used for transcode directly via NFS, CPU on the NFS server rises to about 25% usage!</li>
+</ul>
+</li>
+<li>audio codecs
+<ul>
+<li>probably can find a good preset for “basic 5.1”</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://www.3aal.us/tags/untagged/">untagged</a></span>
+        
+    </p>
+
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.a2c5b062c87998f04d1b5dfb6a89a1b2d79786c21d0cb63a05e8a2082984b64b77d80955e3b97eab17273775162ba372511b711fea2f7608f216e68a67bb22d6.js" integrity="sha512-osWwYsh5mPBNG137aomhsteXhsIdDLY6BeiiCCmEtkt32AlV47l&#43;qxcnN3UWK6NyURtxH&#43;ovdgjyFuaKZ7si1g=="></script>
+
+
+
+    </body>
+</html>

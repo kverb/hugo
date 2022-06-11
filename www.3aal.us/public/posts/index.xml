@@ -1,0 +1,25 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 3 Acres &amp; Liberty</title>
+        <link>https://www.3aal.us/posts/</link>
+        <description>Recent content in Posts on 3 Acres &amp; Liberty</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Sat, 11 Jun 2022 12:45:58 -0400</lastBuildDate>
+        <atom:link href="https://www.3aal.us/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Init</title>
+            <link>https://www.3aal.us/posts/init/</link>
+            <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+            
+            <guid>https://www.3aal.us/posts/init/</guid>
+            <description>Hello, World! Initial post on www.3aal.us</description>
+            <content type="html"><![CDATA[<h1 id="hello-world">Hello, World!</h1>
+<p>Initial post on <a href="https://www.3aal.us">www.3aal.us</a></p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

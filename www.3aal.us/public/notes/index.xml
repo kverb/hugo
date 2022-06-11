@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on 3 Acres &amp; Liberty</title>
+    <link>https://www.3aal.us/notes/</link>
+    <description>Recent content in Notes on 3 Acres &amp; Liberty</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 11 Jun 2022 12:45:58 -0400</lastBuildDate><atom:link href="https://www.3aal.us/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx metrics and log collection with grafana, prometheus, loki</title>
+      <link>https://www.3aal.us/notes/nginx_monitoring/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/notes/nginx_monitoring/</guid>
+      <description>Created: March 10, 2022 1:59 PM Last Edited Time: March 10, 2022 6:28 PM
+meta Grafana - is the front-end dashboard website, that supports querying datasources, and displaying visualizatoins of the data. It is basically a full-stack webapp that you can self-host.
+Prometheus - is a metrics collection endpoint. It runs as an http server that also “scrapes” target services, periodically via http. It becomes the primary data source for counters/timeseries when using grafana dashboards.</description>
+    </item>
+    
+    <item>
+      <title>server notes</title>
+      <link>https://www.3aal.us/notes/server/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/notes/server/</guid>
+      <description>Very loosely organized notes of server builds.
+Plex server Ideally 1U or 2U. Probably should be an intel chip that supports &amp;ldquo;Quick Sync&amp;rdquo; for efficient video transcoding. Supermicro barebones seems to have the ideal chassis+mobo combo. Must have 10Gbe or SFP+
+1U barebones/prebiult supermicro mini, low power SYS-E300-9C with coffee lake i7 can this handle transcodes? lol $5k SYS-110P-FRDN2T 16&amp;quot; depth uses LGA-4189 socket SYS-110C-FHN4T 12&amp;quot; depth uses cheaper CPU LGA-1200 socket 5019c-l doesn&amp;rsquo;t have 10Gbe nic ; can probably be added later DIY Should probably go with intel 1151 socket, based on serverbuilds.</description>
+    </item>
+    
+    <item>
+      <title>video transcoding</title>
+      <link>https://www.3aal.us/notes/video_transcode/</link>
+      <pubDate>Sat, 11 Jun 2022 12:45:58 -0400</pubDate>
+      
+      <guid>https://www.3aal.us/notes/video_transcode/</guid>
+      <description>meta These are some notes gathered on my exploration of transcoding videos for more reliable playback. This doesn’t cover the downloading of the video files; just post-processing them into different formats for playback, primarily on an Apple TV 4k (2019).
+Hardware used:
+AMD Ryzen 7 3800X 8-Core Processor + NVIDIA GeForce RTX 2060 SUPER 11th Gen Intel(R) Core(TM) i5-11400 @ 2.60GHz + (iGPU) overview Most titles downloaded from the internet are h264 encoded, mkv container files.</description>
+    </item>
+    
+  </channel>
+</rss>
